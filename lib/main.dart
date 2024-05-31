@@ -37,24 +37,37 @@ class _MyHomePageState extends State<MyHomePage> {
   String _currentFortune = "";
 
   final _fortuneList = [
-    "You will find a new friend",
-    "You will find a new wife",
-    "You will have a massive income",
-    "Adventure can be real happiness"
+    "A surprise gift is on its way to you.",
+    "You will achieve your greatest goal.",
+    "Love is just around the corner.",
+    "You will embark on a journey soon.",
+    "A new opportunity will present itself.",
+    "You will discover a hidden talent.",
+    "Good health is your greatest wealth.",
+    "A financial windfall is in your future.",
+    "Your kindness will be rewarded.",
+    "You will overcome a great challenge.",
+    "A new friendship will bring joy to your life.",
+    "Success is in your near future.",
+    "An exciting adventure awaits you.",
+    "You will receive good news soon.",
+    "Your hard work will soon pay off.",
+    "A pleasant surprise is in store for you.",
+    "You will find clarity in a difficult situation.",
+    "Happiness will come to you in unexpected ways.",
+    "You will make a positive impact on someone’s life.",
+    "New experiences will enrich your life.",
+    "Your creativity will be recognized.",
+    "You will find peace and contentment.",
+    "A significant change is coming your way.",
+    "You will meet someone who will change your life.",
+    "Good fortune will follow you wherever you go."
   ];
-
   void _randomFortune() {
     var random = Random();
     int fortune = random.nextInt(_fortuneList.length);
     setState(() {
       _currentFortune = _fortuneList[fortune];
-    });
-    print(_currentFortune);
-  }
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
     });
   }
 
@@ -65,10 +78,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "Your fortune is:",
-              style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
-            ),
+            Image.asset('assets/images/fortune_cookie.png',
+                width: 200, height: 200, fit: BoxFit.cover),
+            // const Text(
+            //   "Your fortune is:",
+            //   style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
+            // ),
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
