@@ -26,14 +26,11 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({super.key});
 
-  String _currentFortune = "";
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
   String _currentFortune = "";
 
   final _fortuneList = [
@@ -80,10 +77,6 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Image.asset('assets/images/fortune_cookie.png',
                 width: 200, height: 200, fit: BoxFit.cover),
-            // const Text(
-            //   "Your fortune is:",
-            //   style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
-            // ),
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -94,15 +87,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             ElevatedButton(
-                onPressed: _randomFortune, child: Text('Get Fortune'))
+                onPressed: _randomFortune, child: const Text('Get Fortune'))
           ],
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: _randomFortune,
-      //   tooltip: 'Increment',
-      //   child: const Icon(Icons.add),
-      // ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
